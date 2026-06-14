@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trendz | متجر تريندز - تسوق أحدث المنتجات في الجزائر بالدفع عند الاستلام</title>
+<meta name="description" content="متجر Trendz الإلكتروني الأول في الجزائر. تسوق منتجات عصرية بجودة عالية مع الدفع عند الاستلام والتوصيل لـ 58 ولاية. عروض حصرية وأسعار تنافسية.">
+<meta name="keywords" content="trendz, تريندز, متجر إلكتروني الجزائر, تسوق أونلاين, الدفع عند الاستلام, e-commerce algerie, livraison 58 wilayas">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Trendz - متجرك الإلكتروني المفضل في الجزائر">
+<meta property="og:description" content="تسوق أحدث المنتجات بالدفع عند الاستلام والتوصيل لجميع الولايات">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://trendz.dz">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OnlineStore",
+  "name": "Trendz",
+  "url": "https://trendz.dz",
+  "description": "Multi-product online store in Algeria with Cash on Delivery",
+  "areaServed": "DZ"
+}
+</script>
+<style>
+:root{
+  --primary:#FF3D71;
+  --primary-dark:#E0265A;
+  --secondary:#1A1A2E;
+  --accent:#FFD93D;
+  --light:#F8F9FB;
+  --gradient:linear-gradient(135deg,#FF3D71 0%,#7C3AED 100%);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',sans-serif;background:var(--light);color:var(--secondary);margin:0;overflow-x:hidden}
+body.fr{font-family:'Poppins',sans-serif;direction:ltr}
+body.fr [dir="rtl"]{direction:ltr}
+.ar-only{display:block}
+.fr-only{display:none}
+body.fr .ar-only{display:none}
+body.fr .fr-only{display:block}
+body.fr .ar-inline{display:none}
+body.fr .fr-inline{display:inline}
+.fr-inline{display:none}
+.ar-inline{display:inline}
+
+.gradient-text{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gradient-bg{background:var(--gradient)}
+.btn-primary{background:var(--gradient);color:white;padding:14px 32px;border-radius:50px;font-weight:700;display:inline-flex;align-items:center;gap:10px;transition:all .3s;box-shadow:0 10px 30px rgba(255,61,113,.3);border:none;cursor:pointer}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(255,61,113,.4)}
+.btn-outline{border:2px solid var(--secondary);color:var(--secondary);padding:12px 28px;border-radius:50px;font-weight:700;transition:all .3s;background:transparent;cursor:pointer}
+.btn-outline:hover{background:var(--secondary);color:white}
+
+.nav-blur{backdrop-filter:blur(15px);background:rgba(255,255,255,.85)}
+.hero-bg{background:radial-gradient(ellipse at top right,rgba(255,61,113,.15),transparent 50%),radial-gradient(ellipse at bottom left,rgba(124,58,237,.15),transparent 50%),#fff}
+
+.floating{animation:floating 6s ease-in-out infinite}
+@keyframes floating{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+
+.product-card{background:white;border-radius:24px;overflow:hidden;transition:all .4s;box-shadow:0 4px 20px rgba(0,0,0,.05);position:relative}
+.product-card:hover{transform:translateY(-10px);box-shadow:0 20px 50px rgba(0,0,0,.12)}
+.product-img{height:240px;background:linear-gradient(135deg,#f0f0f5,#e8e8f0);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.badge{position:absolute;top:15px;background:var(--primary);color:white;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700;z-index:2}
+[dir="rtl"] .badge{right:15px}
+[dir="ltr"] .badge{left:15px}
+
+.feature-card{background:white;border-radius:24px;padding:32px;transition:all .3s;border:2px solid transparent}
+.feature-card:hover{border-color:var(--primary);transform:translateY(-5px);box-shadow:0 20px 50px rgba(255,61,113,.1)}
+.feature-icon{width:64px;height:64px;border-radius:18px;background:var(--gradient);display:flex;align-items:center;justify-content:center;color:white;margin-bottom:20px}
+
+.form-input{width:100%;padding:14px 18px;border:2px solid #e5e7eb;border-radius:14px;font-family:inherit;font-size:15px;transition:all .3s;background:white}
+.form-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 4px rgba(255,61,113,.1)}
+.form-label{font-weight:700;display:block;margin-bottom:8px;font-size:14px;color:var(--secondary)}
+
+.reveal{opacity:0;transform:translateY(30px);transition:all .8s}
+.reveal.active{opacity:1;transform:translateY(0)}
+
+.counter-section{background:var(--secondary);color:white;position:relative;overflow:hidden}
+.counter-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,61,113,.2),transparent 50%),radial-gradient(circle at 80% 50%,rgba(124,58,237,.2),transparent 50%)}
+
+.upload-area{border:3px dashed #d1d5db;border-radius:20px;padding:40px;text-align:center;background:#fafafa;cursor:pointer;transition:all .3s}
+.upload-area:hover{border-color:var(--primary);background:#fff5f8}
+
+.lang-toggle{background:#f3f4f6;border-radius:50px;padding:4px;display:inline-flex;gap:2px}
+.lang-toggle button{padding:6px 16px;border-radius:50px;font-weight:700;font-size:13px;border:none;background:transparent;cursor:pointer;transition:all .3s}
+.lang-toggle button.active{background:var(--secondary);color:white}
+
+.scroll-marquee{display:flex;gap:60px;animation:marquee 30s linear infinite;white-space:nowrap}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+body.fr .scroll-marquee{animation:marquee-ltr 30s linear infinite}
+@keyframes marquee-ltr{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+.security-shield{background:linear-gradient(135deg,#1A1A2E,#2D2D5C);color:white;border-radius:30px;padding:60px 40px;position:relative;overflow:hidden}
+.security-shield::after{content:'';position:absolute;width:300px;height:300px;border-radius:50%;background:var(--gradient);opacity:.2;filter:blur(80px);top:-100px;right:-100px}
+
+.product-emoji{font-size:80px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.1))}
+
+@media (max-width:768px){
+  .hero-title{font-size:42px!important}
+  .product-img{height:200px}
+}
+</style>
+</head>
+<body>
+
+<!-- Top promo bar -->
+<div class="gradient-bg text-white text-center py-2 text-sm font-semibold">
+  <span class="ar-inline">🎉 توصيل مجاني للطلبات فوق 5000 دج • الدفع عند الاستلام في 58 ولاية</span>
+  <span class="fr-inline">🎉 Livraison gratuite dès 5000 DA • Paiement à la livraison dans 58 wilayas</span>
+</div>
+
+<!-- Navigation -->
+<nav class="nav-blur sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <div class="w-11 h-11 rounded-xl gradient-bg flex items-center justify-center text-white font-black text-xl shadow-lg">T</div>
+      <span class="text-2xl font-black gradient-text">Trendz</span>
+    </a>
+    
+    <div class="hidden lg:flex items-center gap-8 font-semibold text-gray-700">
+      <a href="#products" class="hover:text-pink-600 transition"><span class="ar-inline">المنتجات</span><span class="fr-inline">Produits</span></a>
+      <a href="#features" class="hover:text-pink-600 transition"><span class="ar-inline">المميزات</span><span class="fr-inline">Avantages</span></a>
+      <a href="#order" class="hover:text-pink-600 transition"><span class="ar-inline">اطلب الآن</span><span class="fr-inline">Commander</span></a>
+      <a href="#contact" class="hover:text-pink-600 transition"><span class="ar-inline">اتصل بنا</span><span class="fr-inline">Contact</span></a>
+    </div>
+    
+    <div class="flex items-center gap-3">
+      <div class="lang-toggle">
+        <button onclick="setLang('ar')" id="btn-ar" class="active">عربي</button>
+        <button onclick="setLang('fr')" id="btn-fr">FR</button>
+      </div>
+      <a href="#order" class="btn-primary hidden md:inline-flex !py-2.5 !px-5 text-sm">
+        <span class="ar-inline">🛒 اطلب الآن</span>
+        <span class="fr-inline">🛒 Commander</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero-bg relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal active">
+      <div class="inline-flex items-center gap-2 bg-white shadow-md px-4 py-2 rounded-full mb-6 text-sm font-bold">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <span class="ar-inline">🇩🇿 رقم 1 في الجزائر</span>
+        <span class="fr-inline">🇩🇿 N°1 en Algérie</span>
+      </div>
+      
+      <h1 class="hero-title text-5xl lg:text-6xl font-black leading-tight mb-6">
+        <span class="ar-inline">تسوّق بذكاء، عِش<br><span class="gradient-text">بأناقة مع Trendz</span></span>
+        <span class="fr-inline">Achetez malin,<br>vivez <span class="gradient-text">tendance avec Trendz</span></span>
+      </h1>
+      
+      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+        <span class="ar-inline">منتجات عصرية بجودة عالية وأسعار لا تُنافَس. الدفع عند الاستلام، توصيل سريع لجميع الولايات الـ 58، وضمان أصلي على كل منتج.</span>
+        <span class="fr-inline">Des produits modernes de haute qualité à des prix imbattables. Paiement à la livraison, livraison rapide dans les 58 wilayas, garantie d'origine.</span>
+      </p>
+      
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="#products" class="btn-primary">
+          <span class="ar-inline">اكتشف المنتجات ←</span>
+          <span class="fr-inline">Découvrir →</span>
+        </a>
+        <a href="#order" class="btn-outline">
+          <span class="ar-inline">اطلب الآن</span>
+          <span class="fr-inline">Commander</span>
+        </a>
+      </div>
+      
+      <div class="flex items-center gap-6 text-sm">
+        <div class="flex -space-x-2 rtl:space-x-reverse">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-purple-500 border-2 border-white"></div>
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border-2 border-white"></div>
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 border-2 border-white"></div>
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 border-2 border-white"></div>
+        </div>
+        <div>
+          <div class="flex text-yellow-400 mb-1">★★★★★</div>
+          <div class="font-bold text-sm"><span class="ar-inline">+15,000 عميل سعيد</span><span class="fr-inline">+15,000 clients satisfaits</span></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Hero Image / Upload Area -->
+    <div class="relative reveal active">
+      <div class="absolute inset-0 gradient-bg rounded-[40px] blur-3xl opacity-30 floating"></div>
+      <div class="relative bg-white rounded-[40px] shadow-2xl p-8 floating">
+        <div class="upload-area" onclick="document.getElementById('heroImg').click()">
+          <div id="heroPreview" class="flex flex-col items-center justify-center min-h-[320px]">
+            <div class="text-7xl mb-4">🛍️</div>
+            <h3 class="text-xl font-bold mb-2"><span class="ar-inline">مساحة صورة المنتج</span><span class="fr-inline">Espace image produit</span></h3>
+            <p class="text-gray-500 text-sm"><span class="ar-inline">انقر لتحميل صورتك (قابل للتغيير)</span><span class="fr-inline">Cliquez pour télécharger (modifiable)</span></p>
+          </div>
+          <input type="file" id="heroImg" accept="image/*" hidden onchange="previewHero(this)">
+        </div>
+        
+        <div class="absolute -top-4 -right-4 rtl:-right-auto rtl:-left-4 bg-yellow-400 text-secondary font-black px-4 py-3 rounded-2xl shadow-lg rotate-6 text-sm">
+          <span class="ar-inline">⚡ خصم 50%</span>
+          <span class="fr-inline">⚡ -50%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Trust Marquee -->
+  <div class="bg-white border-t border-gray-100 py-6 overflow-hidden">
+    <div class="scroll-marquee text-gray-400 font-bold text-lg">
+      <span>🔒 <span class="ar-inline">دفع آمن 100%</span><span class="fr-inline">Paiement 100% sécurisé</span></span>
+      <span>🚚 <span class="ar-inline">توصيل لـ 58 ولاية</span><span class="fr-inline">Livraison 58 wilayas</span></span>
+      <span>✅ <span class="ar-inline">منتجات أصلية</span><span class="fr-inline">Produits authentiques</span></span>
+      <span>💰 <span class="ar-inline">الدفع عند الاستلام</span><span class="fr-inline">Paiement à la livraison</span></span>
+      <span>📞 <span class="ar-inline">دعم 24/7</span><span class="fr-inline">Support 24/7</span></span>
+      <span>🔒 <span class="ar-inline">دفع آمن 100%</span><span class="fr-inline">Paiement 100% sécurisé</span></span>
+      <span>🚚 <span class="ar-inline">توصيل لـ 58 ولاية</span><span class="fr-inline">Livraison 58 wilayas</span></span>
+      <span>✅ <span class="ar-inline">منتجات أصلية</span><span class="fr-inline">Produits authentiques</span></span>
+    </div>
+  </div>
+</header>
+
+<!-- Stats Counter -->
+<section class="counter-section py-16 relative">
+  <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+    <div class="text-center reveal">
+      <div class="text-5xl font-black gradient-text mb-2" data-target="15000">0</div>
+      <div class="text-gray-300 font-semibold"><span class="ar-inline">عميل سعيد</span><span class="fr-inline">Clients satisfaits</span></div>
+    </div>
+    <div class="text-center reveal">
+      <div class="text-5xl font-black gradient-text mb-2" data-target="58">0</div>
+      <div class="text-gray-300 font-semibold"><span class="ar-inline">ولاية مغطاة</span><span class="fr-inline">Wilayas couvertes</span></div>
+    </div>
+    <div class="text-center reveal">
+      <div class="text-5xl font-black gradient-text mb-2" data-target="500">0</div>
+      <div class="text-gray-300 font-semibold"><span class="ar-inline">منتج متنوع</span><span class="fr-inline">Produits variés</span></div>
+    </div>
+    <div class="text-center reveal">
+      <div class="text-5xl font-black gradient-text mb-2"><span data-target="99">0</span>%</div>
+      <div class="text-gray-300 font-semibold"><span class="ar-inline">رضا الزبائن</span><span class="fr-inline">Satisfaction client</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14 reveal">
+      <span class="text-pink-600 font-bold text-sm uppercase tracking-wider"><span class="ar-inline">منتجاتنا</span><span class="fr-inline">Nos produits</span></span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-2 mb-4">
+        <span class="ar-inline">الأكثر <span class="gradient-text">مبيعاً</span> هذا الأسبوع</span>
+        <span class="fr-inline">Les <span class="gradient-text">best-sellers</span> de la semaine</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto"><span class="ar-inline">اكتشف مجموعتنا المختارة بعناية من أفضل المنتجات بأسعار حصرية</span><span class="fr-inline">Découvrez notre sélection exclusive aux meilleurs prix</span></p>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Product 1 -->
+      <article class="product-card reveal">
+        <div class="badge"><span class="ar-inline">جديد</span><span class="fr-inline">Nouveau</span></div>
+        <div class="product-img"><span class="product-emoji">⌚</span></div>
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-1"><span class="ar-inline">ساعة ذكية برو</span><span class="fr-inline">Smart Watch Pro</span></h3>
+          <p class="text-gray-500 text-sm mb-3"><span class="ar-inline">شاشة AMOLED + بطارية 7 أيام</span><span class="fr-inline">AMOLED + Batterie 7 jours</span></p>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-2xl font-black gradient-text">4,990 DA</span>
+              <span class="text-gray-400 line-through text-sm ms-2">9,990 DA</span>
+            </div>
+            <button onclick="scrollTo({top:document.getElementById('order').offsetTop-80,behavior:'smooth'})" class="w-10 h-10 rounded-xl gradient-bg text-white flex items-center justify-center">🛒</button>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Product 2 -->
+      <article class="product-card reveal">
+        <div class="badge" style="background:#10b981">-30%</div>
+        <div class="product-img"><span class="product-emoji">🎧</span></div>
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-1"><span class="ar-inline">سماعات لاسلكية</span><span class="fr-inline">Écouteurs Bluetooth</span></h3>
+          <p class="text-gray-500 text-sm mb-3"><span class="ar-inline">إلغاء الضوضاء النشط</span><span class="fr-inline">Réduction de bruit active</span></p>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-2xl font-black gradient-text">3,500 DA</span>
+              <span class="text-gray-400 line-through text-sm ms-2">5,000 DA</span>
+            </div>
+            <button onclick="scrollTo({top:document.getElementById('order').offsetTop-80,behavior:'smooth'})" class="w-10 h-10 rounded-xl gradient-bg text-white flex items-center justify-center">🛒</button>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Product 3 -->
+      <article class="product-card reveal">
+        <div class="badge" style="background:#f59e0b"><span class="ar-inline">الأكثر طلباً</span><span class="fr-inline">Top vente</span></div>
+        <div class="product-img"><span class="product-emoji">👟</span></div>
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-1"><span class="ar-inline">حذاء رياضي عصري</span><span class="fr-inline">Baskets tendance</span></h3>
+          <p class="text-gray-500 text-sm mb-3"><span class="ar-inline">خامة فاخرة ومريحة</span><span class="fr-inline">Confort et qualité premium</span></p>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-2xl font-black gradient-text">5,990 DA</span>
+              <span class="text-gray-400 line-through text-sm ms-2">8,000 DA</span>
+            </div>
+            <button onclick="scrollTo({top:document.getElementById('order').offsetTop-80,behavior:'smooth'})" class="w-10 h-10 rounded-xl gradient-bg text-white flex items-center justify-center">🛒</button>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Product 4 -->
+      <article class="product-card reveal">
+        <div class="badge" style="background:#7c3aed">-40%</div>
+        <div class="product-img"><span class="product-emoji">💄</span></div>
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-1"><span class="ar-inline">طقم مكياج كامل</span><span class="fr-inline">Kit maquillage complet</span></h3>
+          <p class="text-gray-500 text-sm mb-3"><span class="ar-inline">12 قطعة من ماركة فاخرة</span><span class="fr-inline">12 pièces, marque premium</span></p>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-2xl font-black gradient-text">2,990 DA</span>
+              <span class="text-gray-400 line-through text-sm ms-2">4,990 DA</span>
+            </div>
+            <button onclick="scrollTo({top:document.getElementById('order').offsetTop-80,behavior:'smooth'})" class="w-10 h-10 rounded-xl gradient-bg text-white flex items-center justify-center">🛒</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14 reveal">
+      <span class="text-pink-600 font-bold text-sm uppercase tracking-wider"><span class="ar-inline">لماذا تختارنا</span><span class="fr-inline">Pourquoi nous</span></span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-2 mb-4">
+        <span class="ar-inline"><span class="gradient-text">مميزات</span> تجعل تجربتك استثنائية</span>
+        <span class="fr-inline">Des <span class="gradient-text">avantages</span> qui font la différence</span>
+      </h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="feature-card reveal">
+        <div class="feature-icon text-3xl">🚚</div>
+        <h3 class="text-xl font-bold mb-2"><span class="ar-inline">توصيل سريع</span><span class="fr-inline">Livraison rapide</span></h3>
+        <p class="text-gray-600"><span class="ar-inline">توصيل خلال 48-72 ساعة لجميع ولايات الجزائر الـ 58.</span><span class="fr-inline">Livraison en 48-72h dans les 58 wilayas d'Algérie.</span></p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon text-3xl">💰</div>
+        <h3 class="text-xl font-bold mb-2"><span class="ar-inline">الدفع عند الاستلام</span><span class="fr-inline">Paiement à la livraison</span></h3>
+        <p class="text-gray-600"><span class="ar-inline">ادفع نقداً عند استلام طلبك بدون أي مخاطر مالية.</span><span class="fr-inline">Payez en espèces à la réception sans aucun risque.</span></p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon text-3xl">🔒</div>
+        <h3 class="text-xl font-bold mb-2"><span class="ar-inline">حماية متقدمة</span><span class="fr-inline">Sécurité avancée</span></h3>
+        <p class="text-gray-600"><span class="ar-inline">تشفير SSL وحماية كاملة لبياناتك الشخصية ومعلوماتك.</span><span class="fr-inline">SSL et protection totale de vos données personnelles.</span></p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon text-3xl">↩️</div>
+        <h3 class="text-xl font-bold mb-2"><span class="ar-inline">ضمان الإرجاع</span><span class="fr-inline">Retour garanti</span></h3>
+        <p class="text-gray-600"><span class="ar-inline">إرجاع مجاني خلال 7 أيام في حال عدم الرضا التام.</span><span class="fr-inline">Retour gratuit sous 7 jours en cas de non-satisfaction.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Security Highlight -->
+<section class="py-20 bg-gradient-to-b from-white to-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="security-shield grid lg:grid-cols-2 gap-10 items-center">
+      <div class="relative z-10">
+        <span class="inline-block bg-white/10 backdrop-blur px-4 py-2 rounded-full text-sm font-bold mb-4">🔐 <span class="ar-inline">الحماية أولاً</span><span class="fr-inline">Sécurité d'abord</span></span>
+        <h2 class="text-4xl lg:text-5xl font-black mb-5 leading-tight">
+          <span class="ar-inline">بياناتك في <span class="gradient-text">أمان كامل</span></span>
+          <span class="fr-inline">Vos données en <span class="gradient-text">toute sécurité</span></span>
+        </h2>
+        <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+          <span class="ar-inline">نستخدم أحدث تقنيات التشفير وحماية قواعد البيانات لضمان سرية معلوماتك الشخصية وعمليات الدفع.</span>
+          <span class="fr-inline">Nous utilisons les dernières technologies de chiffrement pour garantir la confidentialité de vos informations.</span>
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full gradient-bg flex items-center justify-center text-xs">✓</span><span class="ar-inline">تشفير SSL 256-bit</span><span class="fr-inline">Chiffrement SSL 256-bit</span></li>
+          <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full gradient-bg flex items-center justify-center text-xs">✓</span><span class="ar-inline">حماية متعددة الطبقات لقواعد البيانات</span><span class="fr-inline">Protection multicouche des bases de données</span></li>
+          <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full gradient-bg flex items-center justify-center text-xs">✓</span><span class="ar-inline">عدم مشاركة بياناتك مع أي طرف ثالث</span><span class="fr-inline">Aucun partage avec des tiers</span></li>
+          <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full gradient-bg flex items-center justify-center text-xs">✓</span><span class="ar-inline">مراقبة 24/7 ضد محاولات الاختراق</span><span class="fr-inline">Surveillance 24/7 anti-piratage</span></li>
+        </ul>
+      </div>
+      <div class="relative z-10 flex justify-center">
+        <div class="text-[200px] floating">🛡️</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Order Form / Checkout -->
+<section id="order" class="py-20 bg-gradient-to-br from-pink-50 via-white to-purple-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-10 reveal">
+      <span class="text-pink-600 font-bold text-sm uppercase tracking-wider"><span class="ar-inline">اطلب الآن</span><span class="fr-inline">Commander</span></span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-2 mb-4">
+        <span class="ar-inline">أكمل <span class="gradient-text">طلبك</span> في دقيقة</span>
+        <span class="fr-inline">Finalisez votre <span class="gradient-text">commande</span> en 1 minute</span>
+      </h2>
+      <p class="text-gray-600"><span class="ar-inline">املأ النموذج وسنتواصل معك لتأكيد الطلب • الدفع عند الاستلام</span><span class="fr-inline">Remplissez le formulaire, nous vous contacterons pour confirmer • Paiement à la livraison</span></p>
+    </div>
+    
+    <div class="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 reveal">
+      <form onsubmit="submitOrder(event)" class="grid md:grid-cols-2 gap-5">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 bg-green-50 text-green-700 px-4 py-3 rounded-xl mb-2 text-sm font-bold">
+            <span>🔒</span>
+            <span class="ar-inline">معلوماتك آمنة ومحمية بالكامل</span>
+            <span class="fr-inline">Vos informations sont entièrement protégées</span>
+          </div>
+        </div>
+        
+        <div>
+          <label class="form-label"><span class="ar-inline">الاسم الكامل *</span><span class="fr-inline">Nom complet *</span></label>
+          <input type="text" required class="form-input" placeholder="...">
+        </div>
+        
+        <div>
+          <label class="form-label"><span class="ar-inline">رقم الهاتف *</span><span class="fr-inline">Téléphone *</span></label>
+          <input type="tel" required pattern="0[5-7][0-9]{8}" class="form-input" placeholder="0X XX XX XX XX">
+        </div>
+        
+        <div>
+          <label class="form-label"><span class="ar-inline">الولاية *</span><span class="fr-inline">Wilaya *</span></label>
+          <select required class="form-input" id="wilayaSelect" onchange="updateCommunes()">
+            <option value=""><span>--</span></option>
+          </select>
+        </div>
+        
+        <div>
+          <label class="form-label"><span class="ar-inline">البلدية *</span><span class="fr-inline">Commune *</span></label>
+          <select required class="form-input" id="communeSelect">
+            <option value=""><span>--</span></option>
+          </select>
+        </div>
+        
+        <div class="md:col-span-2">
+          <label class="form-label"><span class="ar-inline">العنوان الكامل</span><span class="fr-inline">Adresse complète</span></label>
+          <input type="text" class="form-input" placeholder="...">
+        </div>
+        
+        <div class="md:col-span-2">
+          <label class="form-label"><span class="ar-inline">المنتج المطلوب</span><span class="fr-inline">Produit</span></label>
+          <select class="form-input">
+            <option>⌚ Smart Watch Pro - 4,990 DA</option>
+            <option>🎧 Écouteurs Bluetooth - 3,500 DA</option>
+            <option>👟 Baskets tendance - 5,990 DA</option>
+            <option>💄 Kit maquillage - 2,990 DA</option>
+          </select>
+        </div>
+        
+        <div class="md:col-span-2">
+          <label class="form-label"><span class="ar-inline">نوع التوصيل</span><span class="fr-inline">Mode de livraison</span></label>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-pink-500 transition">
+              <input type="radio" name="delivery" checked class="accent-pink-500">
+              <div>
+                <div class="font-bold"><span class="ar-inline">للمنزل 🏠</span><span class="fr-inline">À domicile 🏠</span></div>
+                <div class="text-xs text-gray-500">600 DA</div>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-pink-500 transition">
+              <input type="radio" name="delivery" class="accent-pink-500">
+              <div>
+                <div class="font-bold"><span class="ar-inline">للمكتب 🏢</span><span class="fr-inline">Au bureau 🏢</span></div>
+                <div class="text-xs text-gray-500">400 DA</div>
+              </div>
+            </label>
+          </div>
+        </div>
+        
+        <div class="md:col-span-2 bg-gray-50 rounded-2xl p-6 mt-2">
+          <div class="flex justify-between mb-2 text-gray-600"><span class="ar-inline">المجموع الفرعي</span><span class="fr-inline">Sous-total</span><span>4,990 DA</span></div>
+          <div class="flex justify-between mb-2 text-gray-600"><span class="ar-inline">التوصيل</span><span class="fr-inline">Livraison</span><span>600 DA</span></div>
+          <div class="flex justify-between text-xl font-black border-t pt-3 mt-3"><span class="ar-inline">الإجمالي</span><span class="fr-inline">Total</span><span class="gradient-text">5,590 DA</span></div>
+        </div>
+        
+        <div class="md:col-span-2 text-center">
+          <button type="submit" class="btn-primary !px-12 !py-4 text-lg w-full md:w-auto">
+            <span class="ar-inline">✅ تأكيد الطلب (الدفع عند الاستلام)</span>
+            <span class="fr-inline">✅ Confirmer la commande (Paiement à la livraison)</span>
+          </button>
+          <p class="text-gray-500 text-xs mt-4">
+            <span class="ar-inline">🔒 بياناتك مشفرة ومحمية. لن نشارك معلوماتك مع أي طرف ثالث.</span>
+            <span class="fr-inline">🔒 Vos données sont chiffrées. Aucun partage avec des tiers.</span>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14 reveal">
+      <h2 class="text-4xl lg:text-5xl font-black mb-4">
+        <span class="ar-inline"><span class="gradient-text">آراء</span> عملائنا</span>
+        <span class="fr-inline"><span class="gradient-text">Avis</span> de nos clients</span>
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-3xl reveal">
+        <div class="text-yellow-400 text-xl mb-3">★★★★★</div>
+        <p class="text-gray-700 mb-5 italic"><span class="ar-inline">"خدمة ممتازة، المنتج وصل بسرعة وبجودة عالية. أنصح بالتعامل معهم!"</span><span class="fr-inline">"Service excellent, livraison rapide et qualité au top. Je recommande!"</span></p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-400 to-purple-500"></div>
+          <div><div class="font-bold">Amina K.</div><div class="text-sm text-gray-500">Alger</div></div>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-3xl reveal">
+        <div class="text-yellow-400 text-xl mb-3">★★★★★</div>
+        <p class="text-gray-700 mb-5 italic"><span class="ar-inline">"تجربة رائعة! الدفع عند الاستلام يعطي ثقة كبيرة. شكراً Trendz."</span><span class="fr-inline">"Très bonne expérience! Le paiement à la livraison rassure. Merci Trendz."</span></p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500"></div>
+          <div><div class="font-bold">Karim B.</div><div class="text-sm text-gray-500">Oran</div></div>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-3xl reveal">
+        <div class="text-yellow-400 text-xl mb-3">★★★★★</div>
+        <p class="text-gray-700 mb-5 italic"><span class="ar-inline">"أسعار تنافسية ومنتجات أصلية 100%. الموقع سهل الاستخدام."</span><span class="fr-inline">"Prix compétitifs, produits 100% authentiques. Site facile à utiliser."</span></p>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500"></div>
+          <div><div class="font-bold">Sara M.</div><div class="text-sm text-gray-500">Constantine</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="gradient-bg rounded-[40px] p-12 lg:p-16 text-center text-white relative overflow-hidden">
+      <div class="absolute top-0 right-0 text-9xl opacity-10">🛍️</div>
+      <h2 class="text-4xl lg:text-5xl font-black mb-4 relative z-10">
+        <span class="ar-inline">جاهز للتسوق؟ ابدأ الآن!</span>
+        <span class="fr-inline">Prêt à shopper? Commencez maintenant!</span>
+      </h2>
+      <p class="text-lg mb-8 opacity-90 relative z-10"><span class="ar-inline">انضم لآلاف العملاء الراضين واستفد من العروض الحصرية</span><span class="fr-inline">Rejoignez nos clients satisfaits et profitez d'offres exclusives</span></p>
+      <a href="#order" class="inline-block bg-white text-secondary px-10 py-4 rounded-full font-black hover:scale-105 transition shadow-2xl relative z-10">
+        <span class="ar-inline">🛒 اطلب منتجك الآن</span>
+        <span class="fr-inline">🛒 Commandez maintenant</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-secondary text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-11 h-11 rounded-xl gradient-bg flex items-center justify-center text-white font-black text-xl">T</div>
+        <span class="text-2xl font-black">Trendz</span>
+      </div>
+      <p class="text-gray-400 text-sm"><span class="ar-inline">متجرك الإلكتروني الموثوق في الجزائر. منتجات عصرية، أسعار مناسبة، وتوصيل سريع.</span><span class="fr-inline">Votre boutique de confiance en Algérie. Produits tendance, prix justes, livraison rapide.</span></p>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4 text-lg"><span class="ar-inline">روابط</span><span class="fr-inline">Liens</span></h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="#products" class="hover:text-pink-400"><span class="ar-inline">المنتجات</span><span class="fr-inline">Produits</span></a></li>
+        <li><a href="#features" class="hover:text-pink-400"><span class="ar-inline">المميزات</span><span class="fr-inline">Avantages</span></a></li>
+        <li><a href="#order" class="hover:text-pink-400"><span class="ar-inline">اطلب الآن</span><span class="fr-inline">Commander</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4 text-lg"><span class="ar-inline">المساعدة</span><span class="fr-inline">Aide</span></h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="#" class="hover:text-pink-400"><span class="ar-inline">سياسة الخصوصية</span><span class="fr-inline">Confidentialité</span></a></li>
+        <li><a href="#" class="hover:text-pink-400"><span class="ar-inline">شروط الاستخدام</span><span class="fr-inline">Conditions</span></a></li>
+        <li><a href="#" class="hover:text-pink-400"><span class="ar-inline">الإرجاع والاسترداد</span><span class="fr-inline">Retour</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4 text-lg"><span class="ar-inline">تواصل معنا</span><span class="fr-inline">Contact</span></h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li>📞 0X XX XX XX XX</li>
+        <li>✉️ contact@trendz.dz</li>
+        <li>📍 <span class="ar-inline">الجزائر العاصمة</span><span class="fr-inline">Alger, Algérie</span></li>
+      </ul>
+      <div class="flex gap-3 mt-4">
+        <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-pink-500 flex items-center justify-center transition">f</a>
+        <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-pink-500 flex items-center justify-center transition">📷</a>
+        <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-pink-500 flex items-center justify-center transition">📱</a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10 mt-12 pt-6 text-center text-gray-400 text-sm">
+    © 2025 Trendz.dz - <span class="ar-inline">جميع الحقوق محفوظة</span><span class="fr-inline">Tous droits réservés</span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/213000000000" class="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition" style="animation:floating 3s ease-in-out infinite">💬</a>
+
+<script>
+// Language switching
+function setLang(lang){
+  document.body.classList.toggle('fr',lang==='fr');
+  document.documentElement.lang=lang==='fr'?'fr':'ar';
+  document.documentElement.dir=lang==='fr'?'ltr':'rtl';
+  document.getElementById('btn-ar').classList.toggle('active',lang==='ar');
+  document.getElementById('btn-fr').classList.toggle('active',lang==='fr');
+}
+
+// Image upload preview
+function previewHero(input){
+  if(input.files && input.files[0]){
+    const reader=new FileReader();
+    reader.onload=e=>{
+      document.getElementById('heroPreview').innerHTML=`<img src="${e.target.result}" class="w-full h-[320px] object-cover rounded-2xl">`;
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+// Algerian Wilayas with sample communes
+const wilayas={
+  "01-Adrar":["Adrar","Reggane","Timimoun","Aoulef"],
+  "02-Chlef":["Chlef","Ténès","Oued Fodda","Boukadir"],
+  "03-Laghouat":["Laghouat","Aflou","Ksar El Hirane"],
+  "04-Oum El Bouaghi":["Oum El Bouaghi","Aïn Beïda","Aïn Mlila"],
+  "05-Batna":["Batna","Barika","Arris","Merouana"],
+  "06-Béjaïa":["Béjaïa","Akbou","El Kseur","Tichy"],
+  "07-Biskra":["Biskra","Tolga","Sidi Okba","Ouled Djellal"],
+  "08-Béchar":["Béchar","Kenadsa","Abadla"],
+  "09-Blida":["Blida","Boufarik","Bouinan","Mouzaia"],
+  "10-Bouira":["Bouira","Lakhdaria","Sour El Ghozlane"],
+  "11-Tamanrasset":["Tamanrasset","In Salah","In Guezzam"],
+  "12-Tébessa":["Tébessa","Bir El Ater","Cheria"],
+  "13-Tlemcen":["Tlemcen","Maghnia","Remchi","Nedroma"],
+  "14-Tiaret":["Tiaret","Sougueur","Frenda"],
+  "15-Tizi Ouzou":["Tizi Ouzou","Azazga","Draâ Ben Khedda","Boghni"],
+  "16-Alger":["Alger Centre","Bab El Oued","El Harrach","Bir Mourad Raïs","Dar El Beïda","Hussein Dey"],
+  "17-Djelfa":["Djelfa","Hassi Bahbah","Aïn Oussera"],
+  "18-Jijel":["Jijel","Taher","El Milia","Chekfa"],
+  "19-Sétif":["Sétif","El Eulma","Aïn Oulmène","Aïn Azel"],
+  "20-Saïda":["Saïda","Aïn El Hadjar"],
+  "21-Skikda":["Skikda","Collo","Azzaba"],
+  "22-Sidi Bel Abbès":["Sidi Bel Abbès","Telagh","Sfisef"],
+  "23-Annaba":["Annaba","El Bouni","Berrahal"],
+  "24-Guelma":["Guelma","Bouchegouf","Oued Zenati"],
+  "25-Constantine":["Constantine","El Khroub","Hamma Bouziane","Aïn Smara"],
+  "26-Médéa":["Médéa","Berrouaghia","Ksar Boukhari"],
+  "27-Mostaganem":["Mostaganem","Sidi Ali","Aïn Tédelès"],
+  "28-M'Sila":["M'Sila","Boussaâda","Sidi Aïssa"],
+  "29-Mascara":["Mascara","Sig","Tighennif"],
+  "30-Ouargla":["Ouargla","Touggourt","Hassi Messaoud"],
+  "31-Oran":["Oran","Bir El Djir","Es Senia","Aïn El Türck","Arzew"],
+  "32-El Bayadh":["El Bayadh","Bougtoub","Rogassa"],
+  "33-Illizi":["Illizi","Djanet"],
+  "34-Bordj Bou Arreridj":["Bordj Bou Arreridj","Ras El Oued","Mansourah"],
+  "35-Boumerdès":["Boumerdès","Boudouaou","Bordj Menaïel","Dellys"],
+  "36-El Tarf":["El Tarf","El Kala","Ben M'Hidi"],
+  "37-Tindouf":["Tindouf"],
+  "38-Tissemsilt":["Tissemsilt","Theniet El Had"],
+  "39-El Oued":["El Oued","Guemar","Robbah"],
+  "40-Khenchela":["Khenchela","Kaïs","Chechar"],
+  "41-Souk Ahras":["Souk Ahras","Sedrata","M'Daourouch"],
+  "42-Tipaza":["Tipaza","Cherchell","Hadjout","Koléa"],
+  "43-Mila":["Mila","Ferdjioua","Chelghoum Laïd"],
+  "44-Aïn Defla":["Aïn Defla","Khemis Miliana","Miliana"],
+  "45-Naâma":["Naâma","Mécheria","Aïn Sefra"],
+  "46-Aïn Témouchent":["Aïn Témouchent","Hammam Bou Hadjar"],
+  "47-Ghardaïa":["Ghardaïa","Berriane","Metlili"],
+  "48-Relizane":["Relizane","Oued Rhiou","Mazouna"],
+  "49-Timimoun":["Timimoun","Ouled Saïd"],
+  "50-Bordj Badji Mokhtar":["Bordj Badji Mokhtar"],
+  "51-Ouled Djellal":["Ouled Djellal","Sidi Khaled"],
+  "52-Béni Abbès":["Béni Abbès"],
+  "53-In Salah":["In Salah"],
+  "54-In Guezzam":["In Guezzam"],
+  "55-Touggourt":["Touggourt","Témacine"],
+  "56-Djanet":["Djanet"],
+  "57-El M'Ghair":["El M'Ghair","Djamaa"],
+  "58-El Meniaa":["El Meniaa","Hassi Gara"]
+};
+
+const wilayaSelect=document.getElementById('wilayaSelect');
+Object.keys(wilayas).forEach(w=>{
+  const opt=document.createElement('option');
+  opt.value=w; opt.textContent=w;
+  wilayaSelect.appendChild(opt);
+});
+
+function updateCommunes(){
+  const w=wilayaSelect.value;
+  const cs=document.getElementById('communeSelect');
+  cs.innerHTML='<option value="">--</option>';
+  if(wilayas[w]){
+    wilayas[w].forEach(c=>{
+      const opt=document.createElement('option');
+      opt.value=c; opt.textContent=c;
+      cs.appendChild(opt);
+    });
+  }
+}
+
+function submitOrder(e){
+  e.preventDefault();
+  alert(document.body.classList.contains('fr')?'✅ Commande confirmée! Nous vous contacterons bientôt.':'✅ تم تأكيد الطلب! سنتواصل معك قريباً.');
+}
+
+// Scroll reveal
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active');});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Counter animation
+const counterObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el=e.target;
+      const target=+el.dataset.target;
+      let current=0;
+      const step=target/60;
+      const update=()=>{
+        current+=step;
+        if(current<target){
+          el.textContent=Math.ceil(current).toLocaleString();
+          requestAnimationFrame(update);
+        }else{el.textContent=target.toLocaleString();}
+      };
+      update();
+      counterObs.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('[data-target]').forEach(el=>counterObs.observe(el));
+</script>
+</body>
+</html>
